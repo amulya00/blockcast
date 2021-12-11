@@ -1,0 +1,107 @@
+.App {
+  overflow: hidden;
+  text-align: center;
+  font-size: 16px;
+  height: 100vh;
+}
+
+.header{
+  color: white;
+}
+
+.particles{
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+}
+.button{
+  margin-top: 20%;
+  height: 10%;
+  width: 15%;
+  background-color: lightblue;
+}
+
+.button:hover{
+  background-color: black;
+  color: white;
+}
+.chat {
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.61);
+  backdrop-filter: blur(1px);
+  width: 69%;
+  margin: 0 auto;
+  border: 5px solid white;
+  border-radius: 18px;
+  height: 70%;
+  z-index: 0;
+}
+
+.chat-messages{
+  display: flex;
+  flex-direction: column;
+}
+
+.message-input-wrapper{
+  width: 70%;
+  margin: 0.5% auto;
+  height: 5%;
+}
+.input{
+  width: 90%;
+  margin-right: 0.5%;
+  border: none;
+  height: 100%;
+  border-radius: 1em;
+  text-align: center;
+}
+.input:focus{
+  outline: none;
+}
+.message-input-wrapper button {
+  background-color: rgba(0, 0, 0, 0.61);
+  backdrop-filter: blur(1px);
+  color: white;
+  border: 5px solid white;
+  appearance: none;
+  width: 8%;
+  height: 100%;
+  border-radius: 1em;
+  cursor: pointer;
+}
+.message-input-wrapper button:hover {
+  background-color: silver;
+  backdrop-filter: blur(1px);
+}
+.message-sender{
+  text-align: left;
+  align-self:flex-start;
+  overflow: hidden;
+  width: max-content;
+  margin: 1em 1em 0em 1em;
+}
+.message-receiver{
+  align-self:flex-end;
+  padding: 10px 20px 10px 20px;
+  text-align: right;
+  margin-left: 0;
+  overflow: hidden;
+  width: max-content;
+  margin: 1em 1em 0em 1em;
+}
+.message-sender .message-content{
+  border-radius: 1em;
+  padding: 10px 20px 10px 20px;
+  background:  white;
+}
+.message-receiver .message-content{
+  border-radius: 1em;
+  padding: 10px 20px 10px 20px;
+  background-color: lightgreen;
+}
+.message-content{
+  color: black;
+}
+.message-info{
+  color: white;
+}
