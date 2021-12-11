@@ -24,7 +24,7 @@ function App(){
   const[username,setUsername]=useState('');
   const [messages, setMessages] = useState([]);
   const [message, setMessage] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [loggedIn, setLoggedIn] = useState('');
   const [sending, setSending] = useState(false);
  // const chatInstance = useRef(null);
@@ -76,7 +76,8 @@ function App(){
         setLoggedIn(accounts.current[0])  
     
         
-    
+        
+        setLoading(false);  
         let messageCount = await chatInstance.methods.messageCount().call()
         
 
@@ -102,7 +103,6 @@ function App(){
     
         listenToNewMessages();
     
-        setLoading(false);
       } catch (error) {
         // Catch any errors for any of the above operations.
         alert(
@@ -147,8 +147,8 @@ function App(){
       <div className="App">
       <link href='https://fonts.googleapis.com/css?family=Yellowtail' rel='stylesheet'></link>
 
-        <h1 style={{ color: "#ff9999", fontFamily: "Yellowtail"}} >B l o c k c a s t</h1>
-        <h6 style={{ color: "#00FFFF" }} >ETHERIUM CHAT CLIENT DEPLOYED ON RINKEBY</h6>
+        <h1 style={{ color: "#2596be", fontFamily: "Yellowtail"}} >B l o c k c a s t</h1>
+        <h5 style={{ color: "#be4d25" }} >ETHERIUM CHAT CLIENT DEPLOYED ON RINKEBY</h5>
         {!loggedIn ? (
           <Button style={ {top: '25%'} } variant="contained" >Login with MetaMask</Button>
         ) :

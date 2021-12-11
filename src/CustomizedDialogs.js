@@ -53,24 +53,37 @@ export default function CustomizedDialogs( {username, setUsername, changeUser} )
   const handleClickOpen = () => {
     setOpen(true);
   };
-    const handleClose = () => {
+  const handleClose = () => {
+    setOpen(false);
+    // changeUser();
+  };
+  const handleClose2 = () => {
     setOpen(false);
     changeUser();
   };
-
   return (
     <div style={{position: 'absolute', right: "40px", top: "20px"}}>
       <Button variant="outlined" onClick={handleClickOpen}>
         Change Username
       </Button>
       <BootstrapDialog
+        style={{
+          display: 'flex', justifyContent:'center', alignItems: 'center'}}
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
           >
-              <input type="text" value={username} onChange={ el => setUsername(el.target.value) } placeholder="Type Here"/>
+        <h2
+          style={{margin: '0.5em'}}
+        >Enter New UserName</h2>    
+        <input type="text"
+          style={{margin: '1em', height: '2em'}}
+          value={username}
+          onChange={el => setUsername(el.target.value)}
+          placeholder="Type Here"
+        />
         <DialogActions>
-          <Button autoFocus onClick={handleClose}>
+          <Button autoFocus onClick={handleClose2}>
             Save changes
           </Button>
         </DialogActions>
