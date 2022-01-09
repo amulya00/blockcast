@@ -18,7 +18,7 @@ Finally, it should be accessible even on a locally hosted frontend.
 
 ## The solution
 The solution to combat censorship resistance and provide anonymity is use of blockchain technology. Blockcast uses ethereum, currently on testnet due to monetary limitations. The testnet is provided by Rinkeby. The front-end is based on react.
-Functionality to change on-chain username and convenience of multiple chat rooms is also provided
+Functionality to change on-chain username and convenience of multiple chat rooms is also provided.
 
 ## Installation
 
