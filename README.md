@@ -23,7 +23,7 @@ Functionality to change on-chain username and convenience of multiple chat rooms
 ## Installation
 
 ```
-npm install --save downshift
+npm install 
 ```
 
 You'll also need metamask browser extension for transactions.
